@@ -51,10 +51,6 @@ const MenuIconsAndSearchWrapper = styled(MenuListWrapper)`
   cursor: pointer;
 `;
 
-// function onMenuClicked() {
-
-// }
-
 function MenuItem({ label, onClick = null }) {
   return (
     <MenuItemWrapper onClick={onClick}>
@@ -76,7 +72,7 @@ function DesktopNavbar() {
         <MenuIconsAndSearchWrapper>
           <CgShoppingCart size={18} style={{ marginLeft: 30 }} />
           <CgSearch size={18} style={{ marginLeft: 30, marginRight: 30 }} />
-          <TextInput />
+          <TextInput style={{ width: 200 }} />
         </MenuIconsAndSearchWrapper>
       </Content>
     </Wrapper>

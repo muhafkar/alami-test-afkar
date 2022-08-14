@@ -1,16 +1,9 @@
-import React from 'react';
 import styled from 'styled-components';
 
-const InputWrapper = styled.div`
-  display: flex;
-  position: relative;
-  align-items: center;
-`;
-
-const StyledText = styled.input`
+export default styled.input`
   display: block;
   box-sizing: border-box;
-  width: 200px;
+  width: 100%;
   height:40px;
   padding: 8px;
   text-decoration: none;
@@ -25,11 +18,3 @@ const StyledText = styled.input`
   color: #000;
   transition: all 0.3s;
 `;
-
-export default function InputText() {
-  return (
-    <InputWrapper>
-      <StyledText />
-    </InputWrapper>
-  );
-}

@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
+import MediaQuery from 'react-responsive';
 
 import './index.css';
 
@@ -9,6 +10,7 @@ import HeroBanner from './components/HeroBanner';
 import WaveContentDivider from './components/WaveContentDivider';
 import MiddleContent from './components/MiddleContent';
 import Portfolio from './components/Portfolio';
+import FloatingActions from './components/FloatingActions';
 
 const Wrapper = styled.div`
   height: 100%;
@@ -28,6 +30,9 @@ export default function Home() {
       <WaveContentDivider />
       <MiddleContent />
       <Portfolio />
+      <MediaQuery query="(min-width: 992px)">
+        <FloatingActions />
+      </MediaQuery>
     </Wrapper>
   );
 }

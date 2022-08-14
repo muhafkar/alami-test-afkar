@@ -42,10 +42,11 @@ const SkillsWrapper = styled.div`
 const SkillItem = styled.div`
   background-color: rgb(54 42 46);
   padding: 20px;
-  margin: 20px 20px 0px 0px;
+  margin: 20px 0px 0px 0px;
 
   @media (min-width: 992px) {
     width: 40%;
+    margin: 20px 20px 0px 0px;
   }
 `;
 
