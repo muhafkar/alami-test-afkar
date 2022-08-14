@@ -4,6 +4,7 @@ import { CgChevronRight } from 'react-icons/cg';
 
 const Wrapper = styled.div`
   height: 800px;
+  max-height: 100vh;
   width: 100%;
   background-image: url('/kitchen.jpeg');
   background-position: top;
@@ -11,12 +12,18 @@ const Wrapper = styled.div`
   background-size: cover;
   background-attachment: fixed;
   margin-top: 70px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Content = styled.div`
   text-align: center;
-  padding-top: 170px;
+  padding: 0px 20px 0px 20px;
   color: white;
+  max-width: 600px;
+  margin-top: -150px;
 `;
 
 const Button = styled.button`
@@ -26,6 +33,7 @@ const Button = styled.button`
   border-width: 0px;
   color: white;
   margin-top: 30px;
+  font-weight: 700;
 `;
 
 const ButtonContent = styled.div`
@@ -36,17 +44,17 @@ export default function HeroBanner() {
   return (
     <Wrapper>
       <Content>
-        <h2>Catering should be an experience</h2>
+        <h2 style={{ fontFamily: 'veganstyle' }}>Catering should be an experience</h2>
         <h1>We use only the finest and freshest ingredients</h1>
-        <h4>
+        <p>
           At Sway catering we know that food is an important part of life.
           <br />
           If the meal is not perfect, your event cannot be perfect.
-        </h4>
+        </p>
         <Button>
           <ButtonContent>
-            Request Demo
-            <CgChevronRight />
+            Request a Quote
+            <CgChevronRight style={{ marginLeft: 5 }} />
           </ButtonContent>
         </Button>
       </Content>

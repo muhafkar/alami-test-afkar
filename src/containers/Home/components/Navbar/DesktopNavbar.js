@@ -27,7 +27,6 @@ const MenuListWrapper = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
-  gap: 30px;
   justify-content: center;
 `;
 
@@ -35,22 +34,30 @@ const MenuItemWrapper = styled.div`
   text-decoration: none;
   height: 100%;
   font-size: 16px;
-  color: #2C2C2C;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 30px;
+  color: rgb(24 28 84);
+  cursor: pointer;
 `;
 
 const MenuIconsAndSearchWrapper = styled(MenuListWrapper)`
   max-width: 100%;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   margin: 0px;
+  margin-left: 30px;
+  cursor: pointer;
 `;
 
-function MenuItem({ label }) {
+// function onMenuClicked() {
+
+// }
+
+function MenuItem({ label, onClick = null }) {
   return (
-    <MenuItemWrapper>
+    <MenuItemWrapper onClick={onClick}>
       {label}
       <FaChevronDown size={10} style={{ marginLeft: 5, marginTop: 5 }} />
     </MenuItemWrapper>
@@ -62,13 +69,13 @@ function DesktopNavbar() {
     <Wrapper>
       <Content>
         <MenuListWrapper>
-          <MenuItem label="Demos" />
+          <MenuItem label="Demos" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })} />
           <MenuItem label="Pages" />
           <MenuItem label="Portfolio" />
         </MenuListWrapper>
         <MenuIconsAndSearchWrapper>
-          <CgShoppingCart size={18} />
-          <CgSearch size={18} />
+          <CgShoppingCart size={18} style={{ marginLeft: 30 }} />
+          <CgSearch size={18} style={{ marginLeft: 30, marginRight: 30 }} />
           <TextInput />
         </MenuIconsAndSearchWrapper>
       </Content>
